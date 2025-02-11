@@ -77,6 +77,13 @@ a.pulse:hover {
     transform: scale(1.1); /* Увеличиваем кнопку при наведении */
 }
 
+/* Стили для логотипа */
+.logo {
+    width: 200px; /* Размер логотипа */
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
 /* Описание */
 .info, .support {
     padding: 40px 20px;
