@@ -6,10 +6,10 @@ body {
     color: white;
     background: black;
     overflow-x: hidden;
-    padding-top: 3cm; /* отступ сверху */
+    padding-top: 3cm;
 }
 
-/* Двигающийся фон */
+/* Анимированный фон */
 body::before {
     content: "";
     position: fixed;
@@ -17,14 +17,13 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('bg.jpg') no-repeat center/cover;
+    background: url('bg.webp') no-repeat center/cover;
     z-index: -1;
     
-    /* Анимация движения */
+    /* Движение фона */
     animation: moveBackground 30s linear infinite;
 }
 
-/* Анимация прокрутки */
 @keyframes moveBackground {
     0% { background-position: 50% 50%; }
     25% { background-position: 55% 45%; }
@@ -33,7 +32,7 @@ body::before {
     100% { background-position: 50% 50%; }
 }
 
-/* Контейнер для контента */
+/* Контейнер */
 .container {
     position: relative;
     top: 50%;
@@ -41,17 +40,14 @@ body::before {
     z-index: 10;
 }
 
-h1.glow {
-    font-size: 3em;
-    text-shadow: 0 0 20px cyan, 0 0 30px blue;
+/* Логотип */
+.logo {
+    width: 200px;
+    max-width: 90%;
+    margin-bottom: 20px;
 }
 
-.subtitle {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-/* Стили для ссылки */
+/* Кнопка */
 a.pulse {
     display: inline-block;
     background: linear-gradient(45deg, cyan, blue);
@@ -63,42 +59,41 @@ a.pulse {
     box-shadow: 0 0 20px cyan;
     animation: pulse 1.5s infinite;
     cursor: pointer;
-    position: relative;
     z-index: 10;
 }
 
-/* Анимация для эффекта пульсации */
 @keyframes pulse {
     0% { box-shadow: 0 0 10px cyan; }
     100% { box-shadow: 0 0 20px blue; }
 }
 
 a.pulse:hover {
-    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    transform: scale(1.1);
 }
 
-/* Стили для логотипа */
-.logo {
-    width: 200px; /* Размер логотипа */
-    max-width: 90%;
-    margin-bottom: 20px;
+/* Фиксированная кнопка */
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, cyan, blue);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px cyan;
+    font-size: 1.2em;
 }
 
-/* Описание */
-.info, .support {
-    padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.8);
-    margin-top: 30px;
+.fixed-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-.info h2, .support h2 { color: cyan; }
-ul { list-style: none; padding: 0; }
-ul li { font-size: 1.2em; padding: 5px 0; }
-
-/* Адаптация */
+/* Мобильная адаптация */
 @media (max-width: 768px) {
     .container { top: 55%; }
-    h1.glow { font-size: 2em; }
     .subtitle { font-size: 1.2em; }
     a.pulse { font-size: 1.2em; padding: 10px 20px; }
 }
