@@ -32,16 +32,6 @@ body::before {
     100% { background-position: 50% 50%; }
 }
 
-/* Затемняющий слой */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачное затемнение */
-}
-
 /* Контейнер */
 .container {
     position: relative;
@@ -86,6 +76,32 @@ a.pulse:hover {
     color: white;
     font-weight: bold;
 }
+
+/* SEO-блок */
+.seo-block {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.seo-content h2 {
+    font-size: 1.8em;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.seo-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
 
 /* Мобильная адаптация */
 @media (max-width: 768px) {
