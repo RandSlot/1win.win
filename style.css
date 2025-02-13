@@ -32,6 +32,16 @@ body::before {
     100% { background-position: 50% 50%; }
 }
 
+/* Затемняющий слой */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачное затемнение */
+}
+
 /* Контейнер */
 .container {
     position: relative;
